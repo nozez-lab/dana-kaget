@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Unlock Dana Kaget</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #007bff, #00c6ff);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+    }
+
+    .box {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,.2);
+    }
+
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    .question {
+      margin: 15px 0;
+      font-weight: bold;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background: #007bff;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+
+    #status {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<div class="box">
+  <h1>Unlock Dana Kaget</h1>
+  <p>Yang mau DAGET asah otak dulu 😁</p>
+
+  <!-- PERTANYAAN -->
+  <div class="question">
+    ❓ Siapa member ke 7 Hearts2Hearts sesuai tahun lahir?
+  </div>
+
+  <!-- INPUT JAWABAN -->
+  <input type="text" id="answer" placeholder="Masukkan jawaban kamu">
+
+  <button onclick="unlock()">UNLOCK</button>
+
+  <div id="status"></div>
+</div>
+
+<script>
+  // 🔗 GANTI DENGAN LINK DANA KAGET ASLI
+  const LINK_DANA_ASLI = "https://link.dana.id/danakaget?c=sk4r999x6&r=haXqMF&orderId=20260102101214038915010300166876956347789";
+
+  // ✅ JAWABAN BENAR (huruf besar/kecil bebas)
+  const JAWABAN_BENAR = "ian";
+
+  function unlock() {
+    const input = document.getElementById("answer").value;
+    const jawaban = input.trim().toLowerCase(); // 🔥 inti case-insensitive
+    const status = document.getElementById("status");
+
+    if (jawaban === "") {
+      status.innerHTML = "⚠️ Jawaban tidak boleh kosong";
+      status.style.color = "orange";
+      return;
+    }
+
+    if (jawaban === JAWABAN_BENAR.toLowerCase()) {
+      status.innerHTML = "⏳ Menghubungkan ke server rejeki...";
+      status.style.color = "green";
+
+      setTimeout(() => {
+        window.location.href = LINK_DANA_ASLI;
+      }, 2000);
+    } else {
+      status.innerHTML = "❌ Jawaban salah, coba lagi";
+      status.style.color = "red";
+    }
+  }
+</script>
+
+</body>
+</html>
